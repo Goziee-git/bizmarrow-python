@@ -17,5 +17,5 @@ jobs:
           python-version: '3.11'
       - name: Run unit tests
         run: python3 -m unittest testcase.TestHelloWorld.testExample -v
-      - name: Verify test.py output
-        run: python3 test.py
+      - name: Verify helloworld.py output
+        run: python3 helloworld.py
