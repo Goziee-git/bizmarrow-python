@@ -19,3 +19,11 @@ jobs:
         run: python3 -m unittest testcase.TestHelloWorld.testExample -v
       - name: Verify helloworld.py output
         run: python3 helloworld.py
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t helloworld-app .
