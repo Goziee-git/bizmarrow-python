@@ -1,23 +1,19 @@
-fred = 5
-pete = 4
+import math
+from datetime import datetime, date
 
-global_list = []
+class Info:
+    def __init__(self, *args):
+        self.fname =  args[0] 
+        self.lname = args[1]
+        self.Birth_ = args[2]
+        self._cached_age = None
+        self._age_calculatedDate = None
 
-def name():
-   """function to return the sum of pete and fred"""
-   dave = fred + pete
-   camil = 30
-   papa = 10
-   global nancy
-   nancy = camil + papa
-   print(vars()['dave'])
-   #return local name() variables
-   return vars()
+    def get_full_name(self):
+        return f"my fullname is {self.lname} {self.fname}"
 
-   
-def modify_list(local_list):
-   local_list.extend(["goziee", "sultan"])
-   
-
-which_list = modify_list(global_list)
-print(global_list)
+    def calculate_age(self):
+        """computed method: calculate current age"""
+        today = date.today()
+        age = today.year - self.Bdate.year
+        return age

@@ -83,6 +83,12 @@ class BankAccount:
             'amount': amount,
             'timestamp': 'current_time'
         })
+
+    def set_transaction(self, transaction_type, amount):
+        self.__log_transaction(transaction_type, amount)
+    
+    def get_transaction_history(self):
+        return self.__transaction_history
     
     # Protected method - intended for internal use or inheritance
     def _calculate_interest(self, rate):
