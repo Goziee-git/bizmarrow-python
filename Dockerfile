@@ -8,4 +8,4 @@ FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y python3-minimal && rm -rf /var/lib/apt/lists/*
 COPY --from=builder /app/helloworld.py /app/helloworld.py
 WORKDIR /app
-CMD ["python3", "helloworld.py"]
+CMD ["tail", "-f", "/dev/null"]
